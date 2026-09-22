@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Plantilla membretada | OSCA-ARCOSA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --primary:#005B96;
+  --accent:#00A6B4;
+  --cover:#333565;
+  --dark:#102A43;
+  --text:#404852;
+  --muted:#6C757D;
+  --soft:#F4F7FA;
+  --soft2:#F8FAFF;
+  --line:#DFE6F0;
+  --white:#fff;
+  --font:'Montserrat', Arial, sans-serif;
+}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+@page{size:Letter;margin:0}
+html,body{margin:0;padding:0;background:#5b6570;font-family:var(--font);color:var(--text)}
+.page{width:216mm;min-height:279mm;margin:10mm auto;background:#fff;position:relative;overflow:hidden;padding:28mm 18mm 24mm 18mm;box-shadow:0 0 18px rgba(0,0,0,.20)}
+@media print{html,body{background:#fff}.page{margin:0;box-shadow:none;break-after:page}}
+.brand-stripe{position:absolute;top:0;left:0;right:0;height:4.2mm;background:linear-gradient(90deg,var(--cover),var(--primary) 58%,var(--accent));}
+.header{position:absolute;top:8mm;left:18mm;right:18mm;display:flex;align-items:flex-start;justify-content:space-between;padding-bottom:7mm;border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:19mm;width:auto;max-width:52mm;object-fit:contain;display:block}
+.logo-fallback{font-weight:800;font-size:18pt;letter-spacing:-.4px;color:var(--cover)}
+.logo-fallback span{color:var(--primary)}
+.header-meta{text-align:right;font-size:7.5pt;color:var(--muted);line-height:1.4}
+.header-meta strong{display:block;color:var(--accent);font-size:7.5pt;letter-spacing:1.1px;text-transform:uppercase;margin-bottom:2px}
+.footer{position:absolute;left:18mm;right:18mm;bottom:9mm;border-top:1px solid var(--line);padding-top:4mm;display:flex;align-items:center;justify-content:space-between;font-size:7.6pt;color:var(--muted)}
+.footer strong{color:var(--dark)}
+.kicker{font-size:8pt;text-transform:uppercase;letter-spacing:1.4px;font-weight:800;color:var(--accent);margin-bottom:4mm}
+h1{font-size:22pt;line-height:1.08;margin:0 0 2mm 0;color:var(--dark);letter-spacing:-.4px}
+.subtitle{font-size:10.5pt;color:var(--muted);margin:0 0 7mm 0}
+.meta-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:9mm}
+.meta-item{background:var(--soft2);border-right:1px solid var(--line);padding:9px 10px;min-height:18mm}
+.meta-item:last-child{border-right:0}
+.meta-label{font-size:6.8pt;text-transform:uppercase;letter-spacing:.9px;font-weight:800;color:var(--primary);margin-bottom:5px}
+.meta-value{font-size:8.4pt;color:var(--text)}
+.notice{background:linear-gradient(180deg,#fff,#F8FBFF);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:15px;padding:12px 14px;margin:0 0 8mm 0;box-shadow:0 8px 20px rgba(16,42,67,.06)}
+.notice strong{color:var(--dark)}
+h2{font-size:13pt;line-height:1.2;color:var(--dark);margin:8mm 0 2.5mm 0}
+p,li{font-size:9.5pt;line-height:1.55}
+p{margin:0 0 4mm 0}
+table{width:100%;border-collapse:collapse;margin:5mm 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+th{background:linear-gradient(135deg,var(--cover),var(--primary));color:#fff;text-align:left;font-size:8pt;padding:8px}
+td{font-size:8.5pt;padding:8px;border:1px solid var(--line);vertical-align:top}
+.signature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7mm;margin-top:8mm}
+.signature{border-top:1px solid var(--line);padding-top:4mm;text-align:center;font-size:8pt;color:var(--muted)}
+.signature strong{display:block;color:var(--dark);margin-bottom:14mm}
+.placeholder{color:#6C757D;font-style:italic}
+</style>
+</head>
+<body>
+<section class="page" contenteditable="true">
+  <div class="brand-stripe"></div>
+  <header class="header" contenteditable="false">
+    <div class="logo">
+      <img src="http://www.osca-arcosa.com/JPG/Arcosalogo.png" alt="OSCA-ARCOSA" onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+      <div class="logo-fallback" style="display:none"><span>CI</span> Training</div>
+    </div>
+    <div class="header-meta">
+      <strong>Plantilla institucional</strong>
+      [Tipo de documento]<br />[Fecha]
+    </div>
+  </header>
+
+  <main>
+    <div class="kicker">Documento institucional</div>
+    <h1>[Título del documento]</h1>
+    <p class="subtitle">[Subtítulo, cliente, proyecto o área]</p>
+
+    <div class="meta-grid">
+      <div class="meta-item"><div class="meta-label">Elaborado para</div><div class="meta-value">[Cliente / área]</div></div>
+      <div class="meta-item"><div class="meta-label">Fecha</div><div class="meta-value">[DD/MM/AAAA]</div></div>
+      <div class="meta-item"><div class="meta-label">Versión</div><div class="meta-value">[v. 1.0]</div></div>
+      <div class="meta-item"><div class="meta-label">Elaborado por</div><div class="meta-value">[Nombre]</div></div>
+    </div>
+
+    <div class="notice">
+      <strong>Uso de la plantilla:</strong>
+      <span class="placeholder">reemplace los textos entre corchetes por el contenido del documento. Puede eliminar este recuadro cuando ya no lo necesite.</span>
+    </div>
+
+    <h2>1. Antecedentes</h2>
+    <p class="placeholder">[Describa el contexto, necesidad, problema, solicitud o propósito del documento.]</p>
+
+    <h2>2. Desarrollo</h2>
+    <p class="placeholder">[Integre aquí el contenido principal: análisis, propuesta, hallazgos, acuerdos, plan de trabajo o información técnica.]</p>
+
+    <h2>3. Conclusiones / siguientes pasos</h2>
+    <p class="placeholder">[Indique decisiones, responsables, fechas compromiso, entregables o puntos pendientes.]</p>
+
+    <h2>Firmas / validación</h2>
+    <div class="signature-grid">
+      <div class="signature"><strong>Elaboró</strong>[Nombre / puesto]</div>
+      <div class="signature"><strong>Revisó</strong>[Nombre / puesto]</div>
+      <div class="signature"><strong>Autorizó</strong>[Nombre / puesto]</div>
+    </div>
+  </main>
+
+  <footer class="footer" contenteditable="false">
+    <span><strong>OSCA-ARCOSA © 2026</strong></span>
+    <span>[Código / versión del documento]</span>
+    <span>Página 1</span>
+  </footer>
+</section>
+</body>
+</html>
